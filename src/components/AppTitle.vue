@@ -20,17 +20,17 @@
         display: flex;
         align-items: baseline;
         height: 100px;
-        padding-left: 40px;
-        padding-top: 10px;
+        padding-top: 20px;
         gap: 30px;
 
         h1{
             text-transform: uppercase;
-            font-size: 50px;
+            font-size: 40px;
         }
 
         #logo{
             height: 30px;
+            padding-left: 40px;
 
             img{
                 height: 100%;
