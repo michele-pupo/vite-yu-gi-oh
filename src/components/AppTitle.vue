@@ -19,8 +19,7 @@
         color: black;
         display: flex;
         align-items: baseline;
-        height: 100px;
-        padding-top: 20px;
+        padding: 20px 0px;
         gap: 30px;
 
         h1{

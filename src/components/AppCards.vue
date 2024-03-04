@@ -29,6 +29,8 @@
 </template>
 
 <style lang="scss">
+@use '../styles/variables' as *;
+
    #cards{
     color: black;
 
@@ -36,6 +38,7 @@
       list-style-type: none;
       display: flex;
       flex-flow: row wrap;
+      gap: $cardGap;
     }
    }
 </style>

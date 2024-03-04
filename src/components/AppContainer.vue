@@ -31,8 +31,6 @@
 <style lang="scss">
     #container-orange{
         background-color: #d48f38;
-        width: 100vw;
-        height: calc(100vh - 100px);
 
         #choice{
             width: calc(100vw - 320px);
@@ -43,12 +41,13 @@
         #container-white{
             background-color: #ffffff;
             width: calc(100vw - 320px);
-            // height: calc(100vh - 100px - 250px);
             margin: 0 auto;
-            // padding-top: 225px;
+            padding: 50px;
 
             #number-cards{
-                color: black;
+                background-color: #212529;
+                padding: 20px 0px 20px 15px;
+                font-weight: bold;
             }
         }
     }
