@@ -17,7 +17,11 @@
 <template>
   <div id="container-orange">
     <div id="choice">
-        <button id="choice-type">Alien</button>
+        <select id="choice-type">
+            <option value="easy">Alien</option>
+            <option value="medium">Infermoble Arms</option>
+            <option value="hard">Noble Knight</option>
+        </select>
     </div>
     <div id="container-white">
         <div id="number-cards">
@@ -36,6 +40,16 @@
             width: calc(100vw - 320px);
             margin: 0 auto;
             padding: 35px 0px 35px 18px;
+
+            #choice-type{
+                background-color: white;
+                color: black;
+                font-size: 18px;
+                padding: 10px 70px 10px 10px;
+                border-color: transparent;
+                border-radius: 5px;
+                cursor: pointer;
+            }
         }
 
         #container-white{

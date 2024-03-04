@@ -16,15 +16,17 @@
 <style lang="scss">
     #title{
         background-color: white;
-        color: black;
         display: flex;
         align-items: baseline;
-        padding: 20px 0px;
+        height: 100px;
+        padding-top: 10px;
         gap: 30px;
 
         h1{
+            color: black;
+            font-size: 50px;
+            font-weight: 400;
             text-transform: uppercase;
-            font-size: 40px;
         }
 
         #logo{
