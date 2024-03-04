@@ -1,9 +1,16 @@
 <script>
     import AppCards from './AppCards.vue';
+    import { store } from '../store';
 
     export default{
         name: 'AppContainer',
         components: { AppCards },
+
+        data() {
+          return {
+            store,
+          }
+        },
     }
 </script>
 
@@ -13,6 +20,9 @@
         <button id="choice-type">Alien</button>
     </div>
     <div id="container-white">
+        <div id="number-cards">
+            Found {{ store.cards.length }} cards
+        </div>
         <AppCards></AppCards>
     </div>
   </div>
@@ -36,6 +46,10 @@
             // height: calc(100vh - 100px - 250px);
             margin: 0 auto;
             // padding-top: 225px;
+
+            #number-cards{
+                color: black;
+            }
         }
     }
 </style>
