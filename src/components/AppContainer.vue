@@ -9,8 +9,16 @@
         data() {
           return {
             store,
+            isLoading: true,
           }
         },
+
+        created() {
+            // simuliamo un ritardo di caricamento
+            setTimeout(() => {
+                this.isLoading = false; 
+            }, 1000); 
+        }
     }
 </script>
 
@@ -25,9 +33,9 @@
     </div>
     <div id="container-white">
         <div id="number-cards">
-            Found {{ store.cards.length }} cards
+            {{ isLoading ? 'Loading...' : `Found ${store.cards.length} cards` }}
         </div>
-        <AppCards></AppCards>
+        <AppCards v-if="!isLoading"></AppCards>
     </div>
   </div>
 </template>
