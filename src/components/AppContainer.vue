@@ -45,6 +45,7 @@
 
     #container-orange{
         background-color: $bg-color-card;
+        padding-bottom: 100px;
 
         #choice{
             width: calc(100vw - 320px);
