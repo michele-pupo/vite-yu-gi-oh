@@ -38,7 +38,7 @@
       list-style-type: none;
       display: flex;
       flex-flow: row wrap;
-      gap: $cardGap;
+      gap: $card-gap;
     }
    }
 </style>

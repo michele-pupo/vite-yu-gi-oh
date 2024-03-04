@@ -18,9 +18,9 @@
   <div id="container-orange">
     <div id="choice">
         <select id="choice-type">
-            <option value="easy">Alien</option>
-            <option value="medium">Infermoble Arms</option>
-            <option value="hard">Noble Knight</option>
+            <option>Alien</option>
+            <option>Infermoble Arms</option>
+            <option>Noble Knight</option>
         </select>
     </div>
     <div id="container-white">
@@ -33,8 +33,10 @@
 </template>
 
 <style lang="scss">
+@use '../styles/_variables' as *;
+
     #container-orange{
-        background-color: #d48f38;
+        background-color: $bg-color-card;
 
         #choice{
             width: calc(100vw - 320px);
@@ -62,6 +64,7 @@
                 background-color: #212529;
                 padding: 20px 0px 20px 15px;
                 font-weight: bold;
+                font-size: 25px;
             }
         }
     }

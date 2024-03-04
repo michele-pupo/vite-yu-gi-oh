@@ -13,19 +13,18 @@
     <img :src="cards.card_images[0].image_url" :alt="cards.name">
     <span>{{ cards.name }}</span>
     <strong>{{ cards.archetype }}</strong>
-
   </li>
 </template>
 
 <style lang="scss">
-@use '../styles/variables' as *;
+@use '../styles/_variables' as *;
 
    #single-card{
         text-align: center;
-        background-color: #d48f38;
+        background-color: $bg-color-card;
         display: flex;
         flex-flow: column;
-        width: calc(100% / 5 - $cardGap / 5 * 4 );
+        width: calc(100% / 5 - $card-gap / 5 * 4 );
 
         span{
             color: white;
