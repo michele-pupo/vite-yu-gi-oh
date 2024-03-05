@@ -25,13 +25,23 @@
         this.store.cards = res.data.data;
       })
     },
-  }
+
+    methods: {
+      searchCards() {
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+          .then(res => {
+            // console.log(res.data)
+            this.store.archetypes = res.data;
+        });
+      }
+    }
+  };
 </script>
 
 <template>
 
     <AppTitle></AppTitle>
-    <CardSearch></CardSearch>
+    <CardSearch @search="searchCards()"></CardSearch>
     <AppContainer></AppContainer>
 
 </template>

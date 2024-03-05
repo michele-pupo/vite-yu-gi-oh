@@ -1,16 +1,28 @@
 <script>
+  import { store } from '../store';  
+
   export default{
         name: 'CardSearch',
+
+        data() {
+          return {
+            store,
+          }
+        },
     }
 
 </script>
   
 <template>
   <div id="choice">
-    <select id="choice-type">
-        <option>Alien</option>
-        <option>Infermoble Arms</option>
-        <option>Noble Knight</option>
+    <label for="choice-type"></label>
+    <select 
+        id="choice-type"  
+        name="archetype" 
+        v-model="store.searchCards" 
+        @click="$emit('search')">
+        <option selected value="">Filtra archetype...</option>
+        <option v-for="archetype in store.archetypes" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
     </select>
     </div>
 </template>
