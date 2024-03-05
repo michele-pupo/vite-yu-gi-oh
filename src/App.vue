@@ -3,18 +3,19 @@
   import { store } from './store.js';
   import AppTitle from './components/AppTitle.vue';
   import AppContainer from './components/AppContainer.vue';
+  import CardSearch from './components/CardSearch.vue';
 
   export default{
 
     components: {
       AppTitle,
-      AppContainer
+      AppContainer,
+      CardSearch
     },
 
     data() {
       return {
         store,
-        isLoading: true
       }
     },
 
@@ -24,24 +25,13 @@
         this.store.cards = res.data.data;
       })
     },
-
-    methods: {
-    fetchData() {
-      // Simuliamo una chiamata API che ritorna dei risultati dopo un certo tempo
-      setTimeout(() => {
-        // Qui dovresti fare la tua effettiva chiamata API
-        // Quando i risultati sono pronti, imposta isLoading su false
-        // Esegui questa operazione all'interno del then() o della callback di successo della tua chiamata API
-        this.isLoading = false;
-      }, 2000); // Simuliamo un ritardo di 2 secondi
-    }
-  }
   }
 </script>
 
 <template>
 
     <AppTitle></AppTitle>
+    <CardSearch></CardSearch>
     <AppContainer></AppContainer>
 
 </template>
