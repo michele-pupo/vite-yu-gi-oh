@@ -26,7 +26,7 @@
   <div id="container-orange">
     <div id="container-white">
         <div id="number-cards">
-            {{ isLoading ? 'Loading...' : `Found ${store.cards.length} cards` }}
+            {{ isLoading ? 'Loading...' : `Found ${store.numberOfCards} cards` }}
         </div>
         <AppCards v-if="!isLoading"></AppCards>
     </div>

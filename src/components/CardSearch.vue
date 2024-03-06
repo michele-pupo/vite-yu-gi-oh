@@ -15,14 +15,13 @@
   
 <template>
   <div id="choice">
-    <label for="choice-type"></label>
     <select 
         id="choice-type"  
         name="archetype" 
         v-model="store.searchCards" 
-        @click="$emit('search')">
+        @change="$emit('search')">
         <option selected value="">Filtra archetype...</option>
-        <option v-for="archetype in store.archetypes" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
+        <option v-for="archetype in store.archetypes" :value="archetype.archetype_name ">{{ archetype.archetype_name }}</option>
     </select>
     </div>
 </template>
